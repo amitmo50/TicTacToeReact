@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  #main-container{
+    width: 320px;
+    height: 320px;
+    margin: auto;
+    margin-top: 100px;
+  }
+  
+  #main-container h1 {
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  .board {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .board.game-over {
+    pointer-events: none;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    cursor: pointer;
+  
+    font-size: 60px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+  }
+  
+  .cell:hover {
+    background-color: lightgray;
+  }
+  
+  
+  .title{
+    color:#7FDBFF;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .winner {
+      color: blue;
+  }
+  body {
+    background-color:#001f3f;
+  }
+  
+  .restart-button{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: #7FDBFF;
+    border-radius: 5px;
+    /* margin-left: 75px; */
+    margin-top: 10px;
+    
+  }
+  
+  .winner-message {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    animation: zoom-in-zoom-out 1s ease-in-out infinite;
+  }
+  
+  .tie-message {
+    font-size: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    animation: zoom-in-zoom-out 1s ease-in-out infinite;
+  }
+  
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
