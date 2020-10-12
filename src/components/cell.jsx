@@ -1,13 +1,9 @@
 import React from "react";
 
-const Cell = (props) => {
-    // const setValue = () => {
-    //     props.updateFieldChanged(props.id)
-    // }
+const Cell = ({id, value, onClick,isWinnerSign}) => {
+   
     return(
-        <div onClick={() => {
-            props.onClick(props.id)
-        }} id={props.id} className="cell">{props.value}</div>
+        <div onClick={() => {onClick(id)}} id={id} className={isWinnerSign(id)}>{value}</div>
     );
 }
 
